@@ -830,6 +830,89 @@ a {
 .evento-item a.btn:hover {
     background-color: #35a3a7; /* Cor do botão ao passar o mouse */
 }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.evento-card.unico {
+  background: #f9fafc;
+  border-left: 4px solid #007acc;
+  padding: 1.5rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 720px;
+  margin: 0 auto 2rem auto;
+  font-family: 'Inter', sans-serif;
+
+  /* Transição para suavizar animação */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.evento-card.unico:hover {
+  /* Sombra mais forte e leve elevação */
+  box-shadow: 0 12px 20px rgba(0, 122, 204, 0.3);
+  transform: translateY(-5px);
+}
+
+.evento-card.unico h2 {
+  font-size: 1.5rem;
+  color: #1d3557;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid #dbe2ea;
+  padding-bottom: 0.4rem;
+}
+
+.evento-card.unico ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.evento-card.unico li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.evento-card.unico li::before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.9rem;
+  color: #007acc;
+}
+
+.evento-card.unico strong {
+  display: block;
+  color: #222;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.evento-card.unico span {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .evento-card.unico {
+    padding: 1.25rem 1rem;
+  }
+
+  .evento-card.unico h2 {
+    font-size: 1.3rem;
+  }
+
+  .evento-card.unico strong {
+    font-size: 0.95rem;
+  }
+
+  .evento-card.unico span {
+    font-size: 0.85rem;
+  }
+}
 
 
 /* Seção de Sobre */
