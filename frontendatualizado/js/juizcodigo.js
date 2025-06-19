@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let hasError = false;
 
-        // Função auxiliar para mostrar erros
         const showError = (fieldId, message) => {
             let errorSpan = document.getElementById(fieldId + 'Error');
             if (!errorSpan) {
@@ -37,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
             errorSpan.textContent = message;
         };
 
-        // Validações
         if (!nomeEquipe) {
             showError('nomeEquipe', 'Nome da equipe é obrigatório');
             hasError = true;
@@ -73,11 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Dados formatados para envio:", dados);
 
         try {
-            const response = await fetch("https://codeplac-c7hy.onrender.com/juizcodigo", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(dados)
-            });
+            const response = await fetch("https://codeplac-vt5q.onrender.com/juizcodigo", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(dados)
+});
+
 
             console.log("Resposta recebida:", response.status);
 
