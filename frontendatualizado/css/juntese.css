@@ -1,5 +1,7 @@
+/* ================== Importações ================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
 
+/* ================== Reset & Base ================== */
 * {
     margin: 0;
     padding: 0;
@@ -9,285 +11,231 @@
     font-family: "Montserrat", sans-serif;
 }
 
-/* === Base === */
+/* Ajusta body para layout em coluna e ocupar 100vh */
 body {
-    background: url("/frontendatualizado/img/6032530.jpg") no-repeat center center fixed;
-    background-size: cover;
-    color: #ffffff;
-}
-
-/* === Container Principal === */
-.container {
-    max-width: 1800px;
-    padding: 0 10%;
-    margin-bottom: 85px;
-}
-
-/* === Botão de Destaque === */
-.btndestaque {
-    background-color: #347ebb;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btndestaque:hover {
-    background-color: #6fb1e8;
-    transform: scale(1.05);
-}
-
-/* === Ícones === */
-i.ri-user-line {
-    font-size: 20px;
-    color: white;
-    font-weight: 100;
-}
-
-/* === Utilitários === */
-.hidden {
-    display: none;
-}
-
-/* === Header & Nav === */
-header {
-    background-position: left;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 0;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #121317;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
 }
 
-nav ul {
+/* Faz o main crescer e centralizar o conteúdo */
+main.container {
+    flex: 1; /* ocupa espaço restante */
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 40px 50px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    background: #1e2128;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+
+/* ================== Banner ================== */
+.banner {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.banner h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #43B3FF; /* azul ciano */
+    letter-spacing: 1.2px;
+}
+
+.banner p {
+    color: #AAB3BB; /* cinza claro para subtítulo */
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* ================== Títulos ================== */
+h1 {
+    font-weight: 700;
+    color: #43B3FF; /* azul ciano */
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 1.2px;
+}
+
+/* ================== Formulário ================== */
+form#recrutamentoForm {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
     gap: 25px;
 }
 
-nav ul li {
-    list-style: none;
-    position: relative;
+/* Cada grupo label + campo */
+form#recrutamentoForm > div {
+    display: flex;
+    flex-direction: column;
 }
 
-nav ul li a {
-    color: white;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 8px 12px;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background-color: #fbfeff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-nav ul li .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
-    top: 100%;
-    left: 0;
-    min-width: 160px;
-    border-radius: 5px;
-    overflow: hidden;
-    z-index: 10;
-}
-
-nav ul li .dropdown-menu li a {
-    color: white;
-    padding: 10px 15px;
-    display: block;
-    font-size: 14px;
-    transition: background 0.2s ease;
-}
-
-nav ul li .dropdown-menu li a:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-nav ul li:hover .dropdown-menu {
-    display: block;
-}
-
-/* === Títulos === */
-h1 {
-    font-size: 2.2em;
-    color: #f4f4f4;
-    font-weight: 900;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.6em;
-    color: #246277;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-/* === Parágrafos === */
-p {
+/* Labels */
+label {
     font-weight: 600;
-    letter-spacing: 0.5px;
-    font-size: 1rem;
-    color: #5EB2CF;
+    margin-bottom: 8px;
+    color: #AAB3BB;
+    letter-spacing: 0.03em;
 }
 
-.footer-content p {
-    font-size: 14px;
-    color: white;
-    margin: 10px 0;
-}
-
-/* === Inputs, Selects, Textareas === */
-input,
-textarea,
-select {
-    width: 100%;
-    height: 40px;
-    margin-top: 10px;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    outline: none;
-    font-weight: 600;
-    color: #1c1c1c;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
+/* Inputs e textarea estilizados */
+input[type="text"],
+input[type="email"],
 textarea {
-    height: 100px;
+    background-color: #2F3136; 
+    border: 2px solid #23272A;
+    border-radius: 8px;
+    padding: 14px 18px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-shadow: inset 0 2px 4px rgb(0 0 0 / 0.6);
     resize: vertical;
-    padding: 10px;
+    min-height: 44px;
 }
 
-/* === Botões === */
-button {
+/* Placeholder com cor mais clara */
+input::placeholder,
+textarea::placeholder {
+    color: #72767D;
+    font-weight: 400;
+}
+
+/* Foco */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #43B3FF; 
+    background-color: #36393F;
+    box-shadow: 0 0 8px #43B3FFaa;
+}
+
+/* Textarea altura mínima */
+textarea {
+    min-height: 100px;
+}
+
+/* ================== Radio Buttons ================== */
+form#recrutamentoForm > div > div {
+    display: flex;
+    gap: 25px;
+    margin-top: 8px;
+}
+
+input[type="radio"] {
+    accent-color: #43B3FF;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
-    width: 140px;
-    height: 40px;
+}
+
+input[type="radio"] + label {
+    color: #FFFFFF;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* ================== Mensagens de erro ================== */
+.error {
+    color: #FF5555;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    min-height: 18px;
+}
+
+/* ================== Botão ================== */
+button[type="submit"] {
+    background-color: #43B3FF;
+    color: #121317;
     border: none;
-    border-radius: 6px;
-    background: #246277;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: white;
-    margin-top: 20px;
-    transition: all 0.3s ease;
+    border-radius: 30px;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(67,179,255,0.6);
+    margin-top: 10px;
 }
 
-button:hover {
+button[type="submit"]:hover {
+    background-color: #2C91D9;
     transform: scale(1.05);
-    background-color: #143844;
+    box-shadow: 0 8px 20px rgba(44,145,217,0.8);
 }
 
-/* === Container Login === */
-#container {
-    max-width: 1400px;
-    width: 90%;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    background: rgba(8, 23, 28, 0.5);
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    overflow: hidden;
-}
-
-.banner {
-    width: 50%;
-    background: linear-gradient(135deg, #27556465, #062a428a);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    color: white;
-}
-
-.box-login {
-    width: 50%;
-    background: #fff;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.box-account {
+/* ================== Link "Voltar" ================== */
+main > div > a {
+    display: inline-block;
+    margin-top: 25px;
+    text-align: center;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.box-account h2 {
-    margin-bottom: 20px;
-}
-
-/* === Custom Select === */
-.custom-select select {
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding: 5px;
+    color: #43B3FF;
     font-weight: 600;
-    color: #192046;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* === Responsivo === */
-@media screen and (max-width: 768px) {
-    #container {
-        flex-direction: column;
+main > div > a:hover {
+    color: #2C91D9;
+    text-decoration: underline;
+}
+
+a[href="https://www.codeplac.com.br"] {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #2C91D9; /* azul ciano escuro */
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+a[href="https://www.codeplac.com.br"]:hover {
+    background-color: #43B3FF; /* azul ciano */
+}
+
+
+
+/* ================== Responsivo ================== */
+@media (max-width: 600px) {
+    main.container {
+        padding: 30px 25px;
     }
 
-    .banner,
-    .box-login {
-        width: 100%;
-        border-radius: 0;
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 0.95rem;
+        padding: 12px 14px;
     }
 
-    .box-login {
-        border-radius: 0 0 15px 15px;
-    }
-
-    .banner {
-        border-radius: 15px 15px 0 0;
-    }
-
-    .container {
-        padding: 0 5%;
+    button[type="submit"] {
+        font-size: 1rem;
+        padding: 12px 0;
     }
 }
 
-/* === Footer (não alterado) === */
+/* ================== Footer ================== */
 footer {
     background-color: #131A27;
     padding: 20px;
-    color: white;
+    color: #fff;
     text-align: center;
 }
 
@@ -303,19 +251,31 @@ footer {
     width: 30px;
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
+/* Estilo dos links no footer */
 .footer-links {
-    list-style: none;
-    padding: 0;
     display: flex;
     gap: 15px;
     margin: 15px 0;
+    list-style: none;
+    padding: 0;
 }
 
+.footer-links li a {
+    color: #FFFFFF;
+    background-color: transparent;
+    padding: 6px 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links li a:hover {
+    background-color: #43B3FF;
+    color: #121317;
+}
+
+/* Social icons */
 .social-icons {
     display: flex;
     gap: 10px;
