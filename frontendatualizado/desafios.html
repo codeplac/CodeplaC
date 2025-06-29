@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lista de desafios de programação do CodeplaC para estudantes de TI.">
+    <meta name="keywords" content="CodeplaC, desafios de programação, programação em C, Uniceplac, lógica de programação">
+    <meta name="author" content="Equipe CodeplaC">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css"> <link rel="stylesheet" href="css/desafios.css"> <title>Lista de Desafios - CodeplaC</title>
+</head>
+<body>
+
+    <header style="background-image: url('img/basedefundositeindex.jpg');">
+        <div class="container">
+            <nav>
+                <a href="https://www.codeplac.com.br/index"> <img src="img/logoprincipalparaosite.png" alt="Logo">
+                </a>
+                <ul class="ul">
+                    <li><a href="https://www.codeplac.com.br/index">Home</a></li>
+                 </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Painel de Desafios</h2>
+
+        <div class="challenge-box">
+            <h3>⭐ Desafio 1: Quem Passou de Ano? ⭐</h3>
+            
+            <h4>A História:</h4>
+            <p>O professor Carlos precisa de um programa simples para calcular a média final de seus alunos e dizer se eles foram aprovados. A regra é clara: para passar de ano, a média das duas provas do semestre precisa ser maior ou igual a 6.0.</p>
+            
+            <h4>Sua Tarefa:</h4>
+            <p>Você deve criar um programa que leia as duas notas de um aluno, calcule a média e imprima "APROVADO" ou "REPROVADO".</p>
+            
+            <h4>Como vai funcionar a Entrada:</h4>
+            <p>O programa vai ler uma única linha com duas notas, que podem ter casas decimais (por exemplo, 7.5 ou 5.0).</p>
+
+            <h4>O que seu programa deve fazer:</h4>
+            <p>Calcular a média simples das duas notas: <code>(nota1 + nota2) / 2</code>. Se a média for 6.0 ou mais, imprima <strong>APROVADO</strong>. Se a média for menor que 6.0, imprima <strong>REPROVADO</strong>.</p>
+            
+            <h4>Exemplo Prático:</h4>
+            <pre><code>Se a entrada for:
+7.0 8.0
+
+Lógica: A média de 7.0 e 8.0 é 7.5. Como 7.5 >= 6.0, a saída deve ser:
+APROVADO</code></pre>
+
+            <h4>Outro Exemplo:</h4>
+            <pre><code>Se a entrada for:
+4.5 7.0
+
+Lógica: A média de 4.5 e 7.0 é 5.75. Como 5.75 < 6.0, a saída deve ser:
+REPROVADO</code></pre>
+            
+            <h4>Dicas (Regras do Jogo):</h4>
+            <p>As notas serão sempre números entre 0.0 e 10.0.</p>
+        </div>
+
+        <div class="challenge-box">
+            <h3>⭐⭐ Desafio 2: O Jogo do Par ou Ímpar ⭐⭐</h3>
+            
+            <h4>A História:</h4>
+            <p>Joãozinho e Maria estão brincando de par ou ímpar. Para não terem que discutir, eles querem um juiz eletrônico. Sua missão é criar um programa que decide se um número é par ou ímpar.</p>
+            
+            <h4>Sua Tarefa:</h4>
+            <p>Criar um programa que lê um número inteiro e diz se ele é par ou ímpar.</p>
+
+            <h4>Como vai funcionar a Entrada:</h4>
+            <p>O programa vai ler uma única linha com um número inteiro.</p>
+            
+            <h4>O que seu programa deve fazer:</h4>
+            <p>Se o número for par, imprima a palavra <strong>PAR</strong>. Se o número for ímpar, imprima a palavra <strong>IMPAR</strong>.</p>
+            
+            <h4>Exemplo Prático:</h4>
+            <pre><code>Se a entrada for:
+8
+
+A saída do seu programa deve ser:
+PAR</code></pre>
+
+            <h4>Outro Exemplo:</h4>
+            <pre><code>Se a entrada for:
+21
+
+A saída do seu programa deve ser:
+IMPAR</code></pre>
+            
+            <h4>Dicas (Regras do Jogo):</h4>
+            <p>O número de entrada será um inteiro positivo entre 1 e 10.000. Lembrete de matemática: um número é par se o resto da sua divisão por 2 for igual a zero.</p>
+        </div>
+
+        <div class="challenge-box">
+            <h3>⭐⭐ Desafio 3: A Tabuada Secreta do Zezinho ⭐⭐</h3>
+            
+            <h4>A História:</h4>
+            <p>Zezinho já dominou a tabuada normal e achou muito fácil (assim como você!). Agora, ele inventou um jogo novo: encontrar seus "números secretos". A regra do jogo é: um número só é secreto se ele for um múltiplo do seu número da sorte (N) e, ao mesmo tempo, estiver escondido dentro de um intervalo específico de números (entre A e B).</p>
+            
+            <h4>Sua Tarefa:</h4>
+            <p>Você deve criar um programa que ajude Zezinho a encontrar todos os seus números secretos. O programa lerá o número da sorte de Zezinho (N) e o intervalo (de A até B). Sua missão é imprimir todos os múltiplos de N que estão dentro desse intervalo.</p>
+            
+            <h4>Como vai funcionar a Entrada:</h4>
+            <p>O programa vai ler uma única linha com três números inteiros separados por espaço: N, A e B. N é o número da sorte de Zezinho. A é o início do intervalo. B é o fim do intervalo.</p>
+            
+            <h4>O que seu programa deve fazer:</h4>
+            <p>Verificar todos os números no intervalo de A até B (incluindo o próprio A e B). Para cada número nesse intervalo, decidir se ele é um múltiplo de N. Imprimir cada múltiplo encontrado em uma nova linha.</p>
+            <p><strong>Importante:</strong> Se nenhum múltiplo de N for encontrado no intervalo, o programa deve imprimir a mensagem: <code>Nenhum numero secreto encontrado.</code></p>
+            
+            <h4>Exemplo Prático:</h4>
+            <pre><code>Se a entrada for:
+7 20 50
+
+Lógica: O número da sorte é 7 e o intervalo é de 20 a 50. Os múltiplos de 7 que estão nesse intervalo são 21, 28, 35, 42 e 49.
+A saída do seu programa deve ser:
+21
+28
+35
+42
+49</code></pre>
+            
+            <h4>Outro Exemplo (sem resultados):</h4>
+            <pre><code>Se a entrada for:
+10 51 59
+
+Lógica: Os múltiplos de 10 são ..., 50, 60, ... Nenhum desses está entre 51 e 59.
+A saída do seu programa deve ser:
+Nenhum numero secreto encontrado.</code></pre>
+            
+            <h4>Dicas (Regras do Jogo):</h4>
+            <p>N, A e B serão sempre números inteiros positivos entre 1 e 100.000. O número A será sempre menor ou igual ao número B. Desafio extra de lógica: Como você pode fazer isso sem ter que testar todos os números de A até B, um por um? (Uma solução que testa todos também funciona, mas existe um jeito mais rápido!)</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="img/uniceplacsimboloAzul.png" alt="simbolo" class="footer-logo">
+            <p>©2024 Desenvolvido pela equipe Codeplac.<br></p>
+            <ul class="footer-links">
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Termos</a></li>
+                <li><a href="#">Política de Cookies</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
